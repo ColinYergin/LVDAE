@@ -193,5 +193,5 @@ server.put('/', function(req, res) {
 });
 
 server.listen(server_port, /*server_ip_address,*/ function() {
-	console.log("Listening on " + server_ip_address + ", server_port " + server_port);
+	console.log("Listening on "/* + server_ip_address*/ + ", server_port " + server_port);
 });
