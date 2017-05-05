@@ -3,9 +3,14 @@ var bodyParser = require('body-parser');
 var fs = require('fs');
 var path = require('path');
 
+function otherwise(primary, secondary) {
+	if(primary) return primary;
+	else return secondary;
+}
+
 var server = express();
-var server_port = process.env.OPENSHIFT_NODEJS_PORT || 1001;
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var server_port = otherwise(process.env.OPENSHIFT_NODEJS_PORT, 1001);
+var server_ip_address = otherwise(process.env.OPENSHIFT_NODEJS_IP, '127.0.0.1');
 
 server.use(bodyParser.urlencoded({extended: false}));
 server.use(bodyParser.json());
@@ -64,10 +69,6 @@ function getRndInt(min, max) {
 }
 function randElt(arr) {
 	return arr[getRndInt(0, arr.length)];
-}
-function otherwise(primary, secondary) {
-	if(primary) return primary;
-	else return secondary;
 }
 
 function TemplateGenerator() {
@@ -192,5 +193,5 @@ server.put('/', function(req, res) {
 });
 
 server.listen(server_port, server_ip_address, function() {
-	console.log('server listening on port ' + port);
+	console.log('server listening on port ' + server_port);
 });
