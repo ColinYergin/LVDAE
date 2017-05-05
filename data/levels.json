@@ -1,0 +1,103 @@
+[
+	[
+		{"prompt":"", "autoPass":1,	"answer":"", "__COMMENT":"Basic Keyboard Skills"},
+		{"prompt":"ᐁ",		"answer": "ᐁ"},
+		{"prompt":"ᐁᐃ",		"answer": "ᐁᐃ"},
+		{"prompt":"ᐁᐃᐯ",	"answer": "ᐁᐃᐯ"},
+		{"prompt":"ᒉᒍ",		"answer": "ᒉᒍ"},
+		{"prompt":"ᕵᕹ",		"answer": "ᕵᕹ"},
+		{"prompt":"ᒥᒪ",		"answer": "ᒥᒪ"},
+		{"prompt":"ᕮᕭ",		"answer": "ᕮᕭ"},
+		{"prompt":"ᑭᑲ",		"answer": "ᑭᑲ"},
+		{"prompt":"ᒉᐃᖋ",	"answer": "ᒉᐃᖋ"},
+		{"prompt":"ᕳᕲ",		"answer": "ᕳᕲ"},
+		{"prompt":"ᑌᑎ",		"answer": "ᑌᑎ"},
+		{"prompt":"ᗭᗪ",		"answer": "ᗭᗪ"},
+		{"prompt":"ᖴᖶ",		"answer": "ᖴᖶ"},
+		{"prompt":"ᕂᕆ",		"answer": "ᕂᕆ"},
+		{"prompt":"ᐁᐃᐯᐱᑌᑎ",	"answer": "ᐁᐃᐯᐱᑌᑎ"},
+		{"prompt":"ᒉᐃᖋ",	"answer": "ᒉᐃᖋ"},
+		{"prompt":"ᕂᑌᕆ",	"answer": "ᕂᑌᕆ"},
+		{"prompt":"ᕵᑌ",		"answer": "ᕵᑌ"},
+		{"prompt":"ᕵᑌ ᒉᐃᖋ ᕂᑌᕆ",	"answer": "ᕵᑌ ᒉᐃᖋ ᕂᑌᕆ"},
+		{"prompt":"ᐍ",		"answer": "ᐍ"},
+		{"prompt":"ᐏ",		"answer": "ᐏ"},
+		{"prompt":"ᐻ",		"answer": "ᐻ"},
+		{"prompt":"ᐽ",		"answer": "ᐽ"},
+		{"prompt":"ᑘ",		"answer": "ᑘ"},
+		{"prompt":"ᑚ",		"answer": "ᑚ"},
+		{"prompt":"ᒪᐻᗪᐱᕮ",	"answer": "ᒪᐻᗪᐱᕮ"}
+	],
+	[
+		{"prompt":"ᕵᑌ ᒉᐃᖋ ᕂᑌᕆ",		"answer": "ᒉᐃᖋ", "prefix":"ᒉ", "limit":3, "__COMMENT":"The Concept OR"},
+		{"prompt":"ᕵᑌ ᒪᐍᗪᐱᕮ ᒪᐻᗪᐱᕮ",		"answer": "ᒪᐻᗪᐱᕮ", 	"trap":["ᒪᐍᗪᐱᕮ"]},
+		{"prompt":"ᕵᑌ ᒪᐻᗪᐱᕮ ᒪᐍᗪᐱᕮ",		"answer": "ᒪᐻᗪᐱᕮ", 	"trap":["ᒪᐍᗪᐱᕮ"]}
+	],
+	[
+		{"prompt":"[ᐁᐃᐯᐱᑌᑎᐍᐏᐻᐽᑘᑚ]",	"answer": "ᐁᐃᐯᐱᑌᑎᐍᐏᐻᐽᑘᑚ",	"emphasis": 1.2, "__COMMENT":"Minimal Word Structure (CV, CVC)"},
+		{"gen":{"type":"or", "right":["C[V]"], "wrong":["CC"]}, "count":2, "emphasis": 1.2},
+		{"gen":{"type":"or", "right":["C[V]"], "wrong":["CC"]}, "emphasis": 1.0},
+		{"gen":{"type":"or", "right":["C[V]"], "wrong":["CC"]}, "emphasis": 0.8},
+		{"gen":{"type":"or", "right":["C[V]"], "wrong":["CC"]}, "emphasis": 0.6},
+		{"gen":{"type":"or", "right":["C[V]"], "wrong":["CC"]}, "emphasis": 0.4},
+		{"gen":{"type":"or", "right":["C[V]"], "wrong":["CC"]}, "emphasis": 0.1},
+		{"gen":{"type":"or", "right":["C[V]C"], "wrong":["CCC"]}, "emphasis": 1.0},
+		{"gen":{"type":"or", "right":["C[V]C"], "wrong":["CCC"]}, "emphasis": 1.0},
+		{"gen":{"type":"or", "right":["C[V]C"], "wrong":["CCC"]}, "emphasis": 0.7},
+		{"gen":{"type":"or", "right":["C[V]C"], "wrong":["CCC"]}, "emphasis": 0.5},
+		{"gen":{"type":"or", "right":["CV", "CVC"], "wrong":["CC", "CCC"]}, "count":2}
+	],
+	[
+		{"prompt":"ᐍᐏᐻᐽᑘᑚᐁᐃᐯᐱᑌᑎ",		"answer": "ᐍᐏᐻᐽᑘᑚᐁᐃᐯᐱᑌᑎ", "__COMMENT":"Non-Minimal Word Structure (CV)*C?"},
+		{"gen":{"type":"or", "right":["CV", "CVC"], "wrong":["VV", "VC"]}, "count":4},
+		{"gen":{"type":"or", "right":["CV", "CVC"], "wrong":["CVV", "VCV", "VVC", "VC"]}, "count":4},
+		{"gen":{"type":"or", "right":["CVCV"], "wrong":["CVV", "VV", "VVV", "CVVV", "VVVC"]}, "count":2},
+		{"gen":{"type":"or", "right":["CVCVC"], "wrong":["CVV", "VV", "VVV", "CVVV", "VVVC"]}, "count":1},
+		{"gen":{"type":"or", "right":["CVCVC", "CVCV"], "wrong":["CVV", "VV", "VVV", "CVVV", "VVVC"]}, "count":2}
+	],
+	[
+		{"prompt":"[ᐁᐍᐃᐏᐯᐻᐱᐽᑌᑘᑎᑚ]",		"answer": "ᐁᐍᐃᐏᐯᐻᐱᐽᑌᑘᑎᑚ", "__COMMENT":"Full Word Structure (CVC?)*", "emphasis": 1.0},
+		{"gen":{"type":"or", "right":["C[V]SZ[V]", "C[V]SZ[V]C"], "wrong":["[V]C[V]C[V]", "CC[V]C[V]", "CC[V]C[V]C", "[V]C[V]C[V]C"]}, "count":3, "emphasis": 1.0},
+		{"gen":{"type":"or", "right":["C[V]SZ[V]", "C[V]SZ[V]C"], "wrong":["[V]C[V]C[V]", "CC[V]C[V]", "CC[V]C[V]C", "[V]C[V]C[V]C"]}, "emphasis": 0.8},
+		{"gen":{"type":"or", "right":["C[V]SZ[V]", "C[V]SZ[V]C"], "wrong":["[V]C[V]C[V]", "CC[V]C[V]", "CC[V]C[V]C", "[V]C[V]C[V]C"]}, "emphasis": 0.4},
+		{"gen":{"type":"or", "right":["C[V]SZ[V]", "C[V]SZ[V]C"], "wrong":["[V]C[V]C[V]", "CC[V]C[V]", "CC[V]C[V]C", "[V]C[V]C[V]C"]}, "emphasis": 0.2},
+		{"gen":{"type":"or", "right":["CVSZV", "CVSZVC"], "wrong":["VCVCV", "CCVCV", "CCVCVC", "VCVCVC"]}, "count":4}
+	],
+	[
+		{"prompt":"ᑭ[ᑲ]ᕵ[ᕹ]ᖋ[ᖍ]ᒉ[ᒍ]ᒥ[ᒪ]ᖴ[ᖶ]ᕂ[ᕆ]ᕮ[ᕭ]ᕳ[ᕲ]ᗭ[ᗪ]", "answer": "ᑭᑲᕵᕹᖋᖍᒉᒍᒥᒪᖴᖶᕂᕆᕮᕭᕳᕲᗭᗪ", "emphasis": 1.2, "__COMMENT":"Voiced / Non-Voiced Consonants"},
+		{"gen":{"type":"or", "right":["SVS[Z]V", "SVS[Z]VS"], "wrong":["SVSSV", "SVSSVS"]}, "count":2, "emphasis": 1.2},
+		{"gen":{"type":"or", "right":["SVS[Z]V", "SVS[Z]VS", "SVS[Z]V[Z]", "[Z]VS[Z]V", "[Z]VS[Z]VS", "[Z]VS[Z]V[Z]"], 
+							 "wrong":["SVSSV", "SVSSVS", "SVSSV[Z]", "[Z]VSSV", "[Z]VSSVS", "[Z]VSSV[Z]"]}, "count":2, "emphasis": 1.2},
+		{"gen":{"type":"or", "right":["SVs[z]V", "SVs[z]VS", "SVs[z]V[Z]", "[Z]Vs[z]V", "[Z]Vs[z]VS", "[Z]Vs[z]V[Z]"], 
+							 "wrong":["SVSSV", 		"SVSSVS", 	"SVSSV[Z]", 	"[Z]VSSV", 		"[Z]VSSVS", 	"[Z]VSSV[Z]",
+									  "SV[Z]SV", 	"SV[Z]SVS",	"SV[Z]SV[Z]", 	"[Z]V[Z]SV", 	"[Z]V[Z]SVS", 	"[Z]V[Z]SV[Z]"]}, "count":2, "emphasis": 1.2},
+		{"gen":{"type":"or", "right":["SVS[Z]V", "SVS[Z]VS", "SVS[Z]V[Z]", "[Z]VS[Z]V", "[Z]VS[Z]VS", "[Z]VS[Z]V[Z]"], 
+							 "wrong":["SV[Z][Z]V", "SV[Z][Z]VS", "SV[Z][Z]V[Z]", "[Z]V[Z][Z]V", "[Z]V[Z][Z]VS", "[Z]V[Z][Z]V[Z]"]}, "count":2, "emphasis": 1.2},
+		{"gen":{"type":"or", "right":["SVSZV", "SVSZVS", "SVSZVZ", "ZVSZV", "ZVSZVS", "ZVSZVZ"], 
+							 "wrong":["SVZZV", "SVZZVS", "SVZZVZ", "ZVZZV", "ZVZZVS", "ZVZZVZ"]}, "count":2}
+	],
+	[
+		{"prompt":"ᑭ[ᑲ]ᕵ[ᕹ]ᖋ[ᖍ]ᒉ[ᒍ]ᒥ[ᒪ]ᖴ[ᖶ]ᕂ[ᕆ]ᕮ[ᕭ]ᕳ[ᕲ]ᗭ[ᗪ]", "answer": "ᑭᑲᕵᕹᖋᖍᒉᒍᒥᒪᖴᖶᕂᕆᕮᕭᕳᕲᗭᗪ", "emphasis": 1.2, "__COMMENT":"Matched Consonant Exclusion"},
+		{"gen":{"type":"or", "right":["CVs[z]V", "CVs[z]VC"], "wrong":["CVs[m]V", "CVs[m]VC"]}, "count":3, "emphasis": 1.2},
+		{"gen":{"type":"or", "right":["CVCVs[z]V", "CVs[z]VC"], "wrong":["CVCVs[m]V", "CVCVs[m]VC"]}, "count":3, "emphasis": 1.2},
+		{"gen":{"type":"or", "right":["CVCVszV", "CVszVC", "CVszV", "CVszVC"], "wrong":["CVsmV", "CVsmVC", "CVCVsmV", "CVCVsmVC"]}, "count":2}
+	],
+	[
+		{"prompt":"ᕹᑌᒉᐯᕮ", 	"draw":[{"op":"circle", "r":40, "loc":"center"}], "answer": "ᕹᑌᒉᐯᕮ", "__COMMENT":"Map, Vocab Square, Circle, Triangle"},
+		{"prompt":"ᖋᐃᕆᑚ", 	"draw":[{"op":"rect", "w":80, "h":80, "loc":"center"}], 	"answer": "ᖋᐃᕆᑚ"},
+		{"prompt":"ᒥᐱᖶᐯ", 	"draw":[{"op":"move", "loc":"center"}, {"op":"polygon", "points":[{"x":-50,"y":-50},{"x":50,"y":-50},{"x":50,"y":50}]}],	"answer": "ᒥᐱᖶᐯ"},
+		{"promptShuffle":"ᕹᑌᒉᐯᕮ ᖋᐃᕆᑚ ᒥᐱᖶᐯ", 	"draw":[{"op":"color", "color":"random"}, {"op":"circle", "r":40, "loc":"random"}], 	"answer": "ᕹᑌᒉᐯᕮ",		"trap":["ᖋᐃᕆᑚ", "ᒥᐱᖶᐯ"]},
+		{"promptShuffle":"ᒥᐱᖶᐯ ᕹᑌᒉᐯᕮ ᖋᐃᕆᑚ", 	"draw":[{"op":"color", "color":"random"}, {"op":"rect", "w":80, "h":80, "loc":"random"}], 	"answer": "ᖋᐃᕆᑚ",		"trap":["ᕹᑌᒉᐯᕮ", "ᒥᐱᖶᐯ"]},
+		{"promptShuffle":"ᕹᑌᒉᐯᕮ ᒥᐱᖶᐯ", 		"draw":[{"op":"color", "color":"random"}, {"op":"rect", "w":80, "h":80, "loc":"random"}], 	"answer": "ᖋᐃᕆᑚ",		"trap":["ᕹᑌᒉᐯᕮ", "ᒥᐱᖶᐯ"]},
+		{"promptShuffle":"ᒥᐱᖶᐯ ᖋᐃᕆᑚ", 		"draw":[{"op":"color", "color":"random"}, {"op":"circle", "r":40, "loc":"random"}], 	"answer": "ᕹᑌᒉᐯᕮ",		"trap":["ᖋᐃᕆᑚ", "ᒥᐱᖶᐯ"]},
+		{"promptShuffle":"ᒥᐱᖶᐯ ᕹᑌᒉᐯᕮ", 		"draw":[{"op":"color", "color":"random"}, {"op":"rect", "w":80, "h":80, "loc":"random"}], 	"answer": "ᖋᐃᕆᑚ",		"trap":["ᕹᑌᒉᐯᕮ", "ᒥᐱᖶᐯ"]},
+		{"promptShuffle":"ᕹᑌᒉᐯᕮ ᖋᐃᕆᑚ", 	"draw":[{"op":"color", "color":"random"}, {"op":"move", "loc":"random"}, {"op":"polygon", "points":[{"x":-50,"y":-50},{"x":50,"y":-50},{"x":50,"y":50}]}],	"answer": "ᒥᐱᖶᐯ",		"trap":["ᕹᑌᒉᐯᕮ", "ᖋᐃᕆᑚ"]}
+	],
+	[
+		{"promptShuffle":"ᒥᐱᖶᐯ ᕹᑌᒉᐯᕮ ᖋᐃᕆᑚ", 	"draw":[{"op":"color", "color":"random"}, {"op":"rect", "w":80, "h":80, "loc":"random"}, {"op":"move", "loc":"random"}, {"op":"polygon", "points":[{"x":-50,"y":-50},{"x":50,"y":-50},{"x":50,"y":50}]}], 	"answer":"ᖋᐃᕆᑚ ᒥᐱᖶᐯ", "prefix":"ᖋ", "__COMMENT":"Multiple Objects Syntax"},
+		{"promptShuffle":"ᒥᐱᖶᐯ ᕹᑌᒉᐯᕮ ᖋᐃᕆᑚ", 	"draw":[{"op":"color", "color":"random"}, {"op":"rect", "w":80, "h":80, "loc":"random"}, {"op":"circle", "r":40, "loc":"random"}], 	"answer":"ᖋᐃᕆᑚ ᕹᑌᒉᐯᕮ", "altISUNSUPPORTED":"ᕹᑌᒉᐯᕮ ᖋᐃᕆᑚ"}
+	],
+	[
+		{"prompt":"Done",	"answer": "None", "__COMMENT":"Placeholder, end trap"}
+	]
+]

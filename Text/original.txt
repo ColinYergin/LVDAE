@@ -1,0 +1,79 @@
+Language
+
+Serialized representation of concepts
+
+A statement is a noun, and states that that thing exists.
+So, substituting English words, "Square" is a valid statement that translates to "There is a square"
+Adjectives are easy, they behave as in English. "Red Square" means "There is a red square"
+Verbs create nouns representing relationships. "cover square circle" means "There is a square covering a circle"
+Verbs can take 1 or 2 nouns as arguments, depending on the verb
+Adjectives can also describe verbs. "slow move red square" means "There is a red square that moves/is moving slowly"
+Tense is represented by special adjectives, but is implicitly present/present progressive.
+
+Adjectives can describe adjectives instead of a noun or verb, but this must be done explicitly using a Combine
+"(Combine apply) very stupid man" means apply very to stupid and get "there is a very stupid man"
+Anywhere a noun can be used a pronoun can also be used and applies to the last statement made that fits the pronoun's
+criteria. (gender, number, animation, formality)
+
+Noun
+Adj
+Verb
+Combiner
+
+
+Noun Noun 			-> Noun
+Verb Noun Noun 		-> Noun
+Adj Noun 			-> Noun
+Adj Verb 			-> Verb
+Combine Adj Adj 	-> Adj
+Combine Noun Noun 	-> Noun
+Combine Verb Verb 	-> Verb
+
+
+Space is "　" or ]　[ as opposed to ascii space " " or ] [
+
+Complete Alphabet
+ᐁ	ᐍ	ᐃ	ᐏ	ᐯ	ᐻ	ᐱ	ᐽ	ᑌ	ᑘ	ᑎ	ᑚ
+ᑭ	ᑲ	ᕵ	ᕹ	ᒉ	ᒍ	ᖴ	ᖶ	ᕂ	ᕆ	ᖋ	ᖍ
+ᒥ	ᒪ	ᕭ	ᕮ	ᕲ	ᕳ	ᗪ	ᗭ
+
+After Grouping
+ᐁ	ᐃ	ᐯ	ᐱ	ᑌ	ᑎ
+ᑭ	ᕵ	ᒉ	ᖴ	ᕂ	ᖋ
+ᒥ	ᕭ	ᕲ	ᗪ
+
+Vowels:
+	ᐁ 	ᐍ close front unrounded (bead), near-close near-front unrounded (bid)
+	ᐃ 	ᐏ close back rounded (brood), near-close near-back (uh)
+	ᐯ 	ᐻ close-mid central unrounded (schwa), close-mid front unrounded upward (bay)
+	ᐱ 	ᐽ close-mid back rounded (low), open-mid back unrounded (bud)
+	ᑌ 	ᑘ open-mid front unrounded (bet), near-open front (bat)
+	ᑎ 	ᑚ open front unrounded (bahston), open back unrounded (father)
+
+Consonants:
+	ᑭ 	ᑲ	s z
+	ᕵ 	ᕹ	f v
+	ᒉ 	ᒍ	t d
+	ᖴ 	ᖶ	th th(v)
+	ᕂ 	ᕆ	k g
+	ᖋ 	ᖍ	p b
+	ᒥ 	ᒪ	j ng (ya, bing)
+	ᕮ	ᕭ 	r l
+	ᕳ	ᕲ 	m n
+	ᗭ	ᗪ 	sh ch
+
+A word is any sequence of syllables in which for any two adjacent consonants:
+	The first is from the first column
+	The second is from the second column
+	The first and second are from different rows
+
+A syllable is a consonant followed by a vowel either followed by nothing or another consonant.
+
+
+Important words:
+lang name	ᒪᐻᗪᐱᕮ	Noun
+yes			ᒉᐃᖋ		Noun
+no 			ᕂᑌᕆ		Noun
+or 			ᕵᑌ		Combiner
+
+DO marker	Combiner
