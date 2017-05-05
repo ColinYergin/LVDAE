@@ -112,7 +112,7 @@ function DoSubmit(obj) {
 		if (xhr.status === 200) {
 			gotResponse(JSON.parse(xhr.responseText));
 		} else if (xhr.status !== 200) {
-			setTimeout(()=>DoSubmit(obj), 0);
+			setTimeout(()=>DoSubmit(obj), 50);
 		}
 	};
 	xhr.send(JSON.stringify(obj));
@@ -142,7 +142,6 @@ gotResponse = function(response) {
 					prompt.title += IPAletter[ind];
 				}
 			}
-			if(response.map) {console.log("Got map in response, not supported");}
 			matchHash = response.matchHash;
 			checkHash = response.checkHash;
 			trapMatchHashes = response.trapMatchHashes;
