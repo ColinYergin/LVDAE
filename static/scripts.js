@@ -10,7 +10,7 @@ var checkHash = "";
 var trapMatchHashes = [];
 var trapCheckHashes = [];
 
-cheat = (n) => DoSubmit({cheat:n});
+cheat = n=>DoSubmit({cheat:n});
 
 String.prototype.hashCode = function() {
   var hash = 0, i, chr;
@@ -22,7 +22,7 @@ String.prototype.hashCode = function() {
   }
   return hash;
 };
-back = (a) => a[a.length-1];
+back = a=>a[a.length-1];
 function otherwise(primary, secondary) {
 	if(primary) return primary;
 	else return secondary;
@@ -37,6 +37,7 @@ keyPressed = function(event) {
 	if(InputLocked === 1) {
 		event.preventDefault();
 	} else if(event.charCode > 0 && !event.ctrlKey) {
+		input.selectionStart = Math.max(input.selectionStart, forcePrefix.length);
 		var pre = input.value.substr(0, input.selectionStart);
 		var post = input.value.substr(input.selectionEnd);
 		event.preventDefault();
@@ -109,7 +110,7 @@ function DoSubmit(obj) {
 		if (xhr.status === 200) {
 			gotResponse(JSON.parse(xhr.responseText));
 		} else if (xhr.status !== 200) {
-			console.log('Request failed');
+			setTimeout(()=>DoSubmit(obj), 0);
 		}
 	};
 	xhr.send(JSON.stringify(obj));
@@ -121,6 +122,7 @@ gotResponse = function(response) {
 		var startNextLevel = function() {
 			level = response.level;
 			limit = response.limit;
+			input.value = "";
 			if(response.prefix) {
 				forcePrefix = response.prefix;
 				input.value = forcePrefix;
@@ -129,7 +131,6 @@ gotResponse = function(response) {
 				var color = "color:rgb(" + parseInt(130 * response.emphasis) + "," + parseInt(54 * response.emphasis) + "," + parseInt(155 * response.emphasis) + ");";
 				response.prompt = response.prompt.replace(/\[/g, "<font style=\"" + color + "\">").replace(/\]/g, "</font>");
 			}
-			document.getElementById("maininput").value = "";
 			var prompt = document.getElementById("prompt");
 			prompt.innerHTML = response.prompt;
 			prompt.title = "";
@@ -169,16 +170,15 @@ function DrawSpec(spec) {
 	var ctx = document.getElementById("draw").getContext("2d");
 	var pen = new Pen();
 	var cmds = {
-		rect: (p)=>pen.Rect(p.loc, p.w, p.h),
-		circle: (p)=>pen.Circle(p.loc, p.r),
-		polygon: (p)=>pen.Polygon(p.points),
-		move: (p)=>pen.Move(p.loc),
-		reset: (p)=>pen.Reset(),
-		color: (p)=>pen.color = p.color,
+		rect: 	p=>pen.Rect(p.loc, p.w, p.h),
+		circle: p=>pen.Circle(p.loc, p.r),
+		polygon:p=>pen.Polygon(p.points),
+		move:	p=>pen.Move(p.loc),
+		reset:	p=>pen.Reset(),
+		color:	p=>pen.color = p.color
 	};
 	for(var i = 0; i < spec.length; ++i) {
 		if(spec[i]) {
-			console.log(pen.offset);
 			cmds[spec[i].op](spec[i]);
 		}
 	}
