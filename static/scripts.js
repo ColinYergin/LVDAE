@@ -89,6 +89,9 @@ enforcePrefix = function() {
 	if(input.value.length > limit && limit != 0) {
 		input.value = input.value.substr(0, limit)
 	}
+	while(input.value.startsWith("　")) {
+		input.value = input.value.substring(1);
+	}
 }
 
 submit = function(string) {
