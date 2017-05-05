@@ -4,7 +4,8 @@ var fs = require('fs');
 var path = require('path');
 
 var server = express();
-var port = 1001;
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 1001;
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 server.use(bodyParser.urlencoded({extended: false}));
 server.use(bodyParser.json());
@@ -190,6 +191,6 @@ server.put('/', function(req, res) {
 	}
 });
 
-server.listen(port, function() {
+server.listen(server_port, server_ip_address, function() {
 	console.log('server listening on port ' + port);
 });
