@@ -1,3 +1,6 @@
+# Source : https://github.com/github/gitignore/blob/master/Node.gitignore
+# License: CC0 1.0 Universal, https://github.com/github/gitignore/blob/master/LICENSE
+
 # Logs
 logs
 *.log

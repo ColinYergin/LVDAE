@@ -1,2 +1,4 @@
-# LVDAE
-Simple one web page puzzle game: ᒪᐻᗪᐱᕮ
+# ᒪᐻᗪᐱᕮ
+Simple one web page puzzle game
+
+Required Node packages: express, body-parser, fs, path
