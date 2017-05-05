@@ -34,7 +34,9 @@ Place = (x,y)=>({x:x,y:y});
 keyPressed = function(event) {
 	var input = document.getElementById("maininput");
 	console.log(event);
-	if(InputLocked === 1) {
+	if(event.key === "Backspace" && input.selectionStart <= forcePrefix.length) {
+		event.preventDefault();
+	} else if(InputLocked === 1) {
 		event.preventDefault();
 	} else if(event.charCode > 0 && !event.ctrlKey) {
 		input.selectionStart = Math.max(input.selectionStart, forcePrefix.length);
