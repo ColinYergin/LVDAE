@@ -49,11 +49,11 @@
 	],
 	[
 		{"prompt":"ᐍᐏᐻᐽᑘᑚᐁᐃᐯᐱᑌᑎ",		"answer": "ᐍᐏᐻᐽᑘᑚᐁᐃᐯᐱᑌᑎ", "__COMMENT":"Non-Minimal Word Structure (CV)*C?"},
-		{"gen":{"type":"or", "right":["CV", "CVC"], "wrong":["VV", "VC"]}, "count":4},
-		{"gen":{"type":"or", "right":["CV", "CVC"], "wrong":["CVV", "VCV", "VVC", "VC"]}, "count":4},
+		{"gen":{"type":"or", "right":["CV", "CVC"], "wrong":["VV", "VC"]}, "count":2},
+		{"gen":{"type":"or", "right":["CV", "CVC"], "wrong":["CVV", "VCV", "VVC", "VC"]}, "count":2},
 		{"gen":{"type":"or", "right":["CVCV"], "wrong":["CVV", "VV", "VVV", "CVVV", "VVVC"]}, "count":2},
 		{"gen":{"type":"or", "right":["CVCVC"], "wrong":["CVV", "VV", "VVV", "CVVV", "VVVC"]}, "count":1},
-		{"gen":{"type":"or", "right":["CVCVC", "CVCV"], "wrong":["CVV", "VV", "VVV", "CVVV", "VVVC"]}, "count":2}
+		{"gen":{"type":"or", "right":["CVCVC", "CVCV"], "wrong":["CVV", "VV", "VVV", "CVVV", "VVVC"]}, "count":1}
 	],
 	[
 		{"prompt":"[ᐁᐍᐃᐏᐯᐻᐱᐽᑌᑘᑎᑚ]",		"answer": "ᐁᐍᐃᐏᐯᐻᐱᐽᑌᑘᑎᑚ", "__COMMENT":"Full Word Structure (CVC?)*", "emphasis": 1.0},
