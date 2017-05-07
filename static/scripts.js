@@ -36,19 +36,24 @@ keyPressed = function(event) {
 	console.log(event);
 	if(event.key === "Backspace" && input.selectionStart <= forcePrefix.length) {
 		event.preventDefault();
+		return false;
 	} else if(InputLocked === 1) {
 		event.preventDefault();
+		return false;
 	} else if(event.charCode > 0 && !event.ctrlKey) {
 		input.selectionStart = Math.max(input.selectionStart, forcePrefix.length);
 		var pre = input.value.substr(0, input.selectionStart);
 		var post = input.value.substr(input.selectionEnd);
-		event.preventDefault();
 		pre = pre.concat(translateLetter(event.key))
 		input.value = pre.concat(post);
 		input.selectionStart = pre.length;
 		input.selectionEnd = pre.length;
 		enforcePrefix();
 		submit(input.value);
+		event.preventDefault();
+		return false;
+	} else {
+		return true;
 	}
 }
 keyUp = function(event) {
